@@ -16,7 +16,7 @@ st.set_page_config(layout='wide')
 st.title("Genie🤓")
 
 # Catchy description
-st.side_bar.markdown("""
+st.sidebar.markdown("""
 **Welcome to Genie🤓!**
 
 **Your Intelligent Data Whisperer:**
