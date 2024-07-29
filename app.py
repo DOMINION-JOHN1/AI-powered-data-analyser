@@ -2,7 +2,8 @@ import streamlit as st
 from pandasai.llm.openai import OpenAI
 import os
 import pandas as pd
-from pandasai import SmartDataframe, ResponseParser
+from pandasai import SmartDataframe
+from pandasai.responses.response_parser import ResponseParser
 import matplotlib.pyplot as plt
 
 
