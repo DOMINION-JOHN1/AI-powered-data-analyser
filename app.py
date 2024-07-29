@@ -36,15 +36,17 @@ if uploaded_file is not None:
     # Add a text input for user queries
     user_query = st.text_input("Ask a question about your data:")
     if user_query:
+
+        # Path where the plot is saved
+        plot_path = '/mount/src/talk-2-data/exports/charts/temp_chart.png'
+
+        if os.path.exists(plot_path):
+            os.remove(plot_path)
         #Invoke the agent with the human message and display the output
         response = query_engine.chat(user_query)
         st.write("Genie🤓:")
         st.write(response)
 
-
-        # Path where the plot is saved
-        plot_path = '/mount/src/talk-2-data/exports/charts/temp_chart.png'
-        
         # Check if the plot exists and display it
         if os.path.exists(plot_path):
             st.image(plot_path)
