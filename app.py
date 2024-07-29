@@ -11,8 +11,8 @@ import io
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 llm = OpenAI(api_token=openai_api_key)
 
-st.set_page_config(page_title="Genie🤓", layout='wide')
-
+st.set_page_config(layout='wide')
+st.title("Genie🤓")
 # Catchy description
 st.sidebar.markdown("""
 **Welcome to Genie🤓!**
@@ -26,7 +26,7 @@ uploaded_file = st.sidebar.file_uploader("Upload a CSV file", type=["csv"])
 if uploaded_file is not None:
     # Read the CSV file into a DataFrame
     df = pd.read_csv(uploaded_file, encoding='ISO-8859-1').fillna(value=0)
-    st.sidebar.write("Uploaded CSV file:")
+    st.write("Uploaded CSV file:")
     st.write(df)
     
     llm = OpenAI(api_token=openai_api_key)
@@ -42,7 +42,7 @@ if uploaded_file is not None:
             os.remove(plot_path)
         #Invoke the agent with the human message and display the output
         response = query_engine.chat(user_query)
-        st.write("Genie🤓:")
+        st.sidebar.write("Genie🤓:")
         st.write(response)
 
         # Check if the plot exists and display it
