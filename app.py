@@ -41,18 +41,17 @@ if uploaded_file is not None:
         st.write("Genie🤓:")
         st.write(response)
 
-         # Check if the response includes a plot
-        if "plot" in response:
-            # Capture the plot by saving it to a buffer
-            buf = io.BytesIO()
-            plt.savefig(buf, format='png')
-            buf.seek(0)
+
+        # Capture the plot by saving it to a buffer
+        buf = io.BytesIO()
+        plt.savefig(buf, format='png')
+        buf.seek(0)
     
-            # Display the plot
-            st.pyplot(plt)
+        # Display the plot
+        st.pyplot(plt)
     
-            # Clear the plot to avoid overlapping plots
-            plt.clf()
+        # Clear the plot to avoid overlapping plots
+        plt.clf()
 
 else:
     st.write("Please upload a CSV file to proceed.")
