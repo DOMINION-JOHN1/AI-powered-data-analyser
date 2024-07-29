@@ -1,5 +1,5 @@
 streamlit
 pandasai
 openai
-pandas==1.5.3
-numpy>=1.25.0
+numpy==1.21.0
+pandas==1.3.0
