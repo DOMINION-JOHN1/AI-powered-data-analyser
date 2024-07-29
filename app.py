@@ -42,7 +42,7 @@ if uploaded_file is not None:
             os.remove(plot_path)
         #Invoke the agent with the human message and display the output
         response = query_engine.chat(user_query)
-        st.sidebar.write("Genie🤓:")
+        st.write("Genie🤓:")
         st.write(response)
 
         # Check if the plot exists and display it
