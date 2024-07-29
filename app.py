@@ -42,7 +42,7 @@ if uploaded_file is not None:
         st.write(response)
 
          # Check if the response includes a plot
-        if "plot" in response.lower():
+        if "plot" in response:
             # Capture the plot by saving it to a buffer
             buf = io.BytesIO()
             plt.savefig(buf, format='png')
