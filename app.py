@@ -11,9 +11,7 @@ import io
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 llm = OpenAI(api_token=openai_api_key)
 
-st.set_page_config(layout='wide')
-
-st.title("Genie🤓")
+st.set_page_config(page_title="Genie🤓", layout='wide')
 
 # Catchy description
 st.sidebar.markdown("""
@@ -28,7 +26,7 @@ uploaded_file = st.sidebar.file_uploader("Upload a CSV file", type=["csv"])
 if uploaded_file is not None:
     # Read the CSV file into a DataFrame
     df = pd.read_csv(uploaded_file, encoding='ISO-8859-1').fillna(value=0)
-    st.write("Uploaded CSV file:")
+    st.sidebar.write("Uploaded CSV file:")
     st.write(df)
     
     llm = OpenAI(api_token=openai_api_key)
