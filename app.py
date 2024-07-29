@@ -32,7 +32,7 @@ if uploaded_file is not None:
     st.write(df)
     
     llm = OpenAI(api_token=openai_api_key)
-    query_engine = SmartDataframe(df,config={"llm": llm,"response_parser": ResponseParser},)
+    query_engine = SmartDataframe(df,config={"llm": llm,"response_parser": ResponseParser})
     # Add a text input for user queries
     user_query = st.text_input("Ask a question about your data:")
     if user_query:
