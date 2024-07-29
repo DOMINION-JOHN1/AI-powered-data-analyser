@@ -42,16 +42,14 @@ if uploaded_file is not None:
         st.write(response)
 
 
-        # Capture the plot by saving it to a buffer
-        buf = io.BytesIO()
-        plt.savefig(buf, format='png')
-        buf.seek(0)
-    
-        # Display the plot
-        st.pyplot(plt)
-    
-        # Clear the plot to avoid overlapping plots
-        plt.clf()
+        # Path where the plot is saved
+        plot_path = '/mount/src/talk-2-data/exports/charts/temp_chart.png'
+        
+        # Check if the plot exists and display it
+        if os.path.exists(plot_path):
+            st.image(plot_path)
+        else:
+            st.write("No plot generated.")
 
 else:
     st.write("Please upload a CSV file to proceed.")
