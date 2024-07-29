@@ -5,6 +5,7 @@ import pandas as pd
 from pandasai import SmartDataframe
 from pandasai.responses.response_parser import ResponseParser
 import matplotlib.pyplot as plt
+import io
 
 
 openai_api_key = st.secrets["OPENAI_API_KEY"]
