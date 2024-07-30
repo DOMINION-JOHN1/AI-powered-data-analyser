@@ -7,20 +7,17 @@ from pandasai.responses.response_parser import ResponseParser
 import matplotlib.pyplot as plt
 import io
 
-
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 llm = OpenAI(api_token=openai_api_key)
-
 st.title("Genie🤓")
-st.image("download (1) (1).png", width=500)
+st.image("download (1) (1).png", height=300, width=800)
 st.sidebar.image("download.png", width=200)
 # Catchy description
 st.sidebar.markdown("""
 **Welcome to Genie🤓!**
 
-**Your Intelligent Data Whisperer!**
-
-Upload your CSV files, ask insightful questions, and get instant answers. Whether it's generating interactive visualizations, performing data analysis, or simply making sense of your data, our AI-powered chatbot is here to assist. Transform your raw data into meaningful insights effortlessly. Let Data Analytics Buddy take your data exploration to the next level!
+**Your Intelligent Data Whisperer**
+Upload your CSV files, ask insightful questions, and get instant answers. Whether it's generating interactive visualizations, performing data analysis, or simply making sense of your data, our AI-powered chatbot is here to assist. Transform your raw data into meaningful insights effortlessly. Let Genie🤓 take your data exploration to the next level!
 """)
 
 uploaded_file = st.sidebar.file_uploader("Upload a CSV file", type=["csv"])
