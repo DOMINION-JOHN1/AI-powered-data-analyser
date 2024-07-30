@@ -17,6 +17,7 @@ st.sidebar.markdown("""
 **Welcome to Genie🤓!**
 
 **Your Intelligent Data Whisperer**
+
 Upload your CSV files, ask insightful questions, and get instant answers. Whether it's generating interactive visualizations, performing data analysis, or simply making sense of your data, our AI-powered chatbot is here to assist. Transform your raw data into meaningful insights effortlessly. Let Genie🤓 take your data exploration to the next level!
 """)
 
