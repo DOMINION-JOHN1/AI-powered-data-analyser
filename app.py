@@ -10,7 +10,7 @@ import io
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 llm = OpenAI(api_token=openai_api_key)
 st.title("Genie🤓")
-st.image("download (1) (1).png", height=300, width=800)
+st.image("download (1) (1).png",width=300)
 st.sidebar.image("download.png", width=200)
 # Catchy description
 st.sidebar.markdown("""
