@@ -11,9 +11,8 @@ import io
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 llm = OpenAI(api_token=openai_api_key)
 
-st.set_page_config(layout='wide')
 st.title("Genie🤓")
-st.image("download (1) (1).png", width=700)
+st.image("download (1) (1).png", width=500)
 st.sidebar.image("download.png", width=200)
 # Catchy description
 st.sidebar.markdown("""
