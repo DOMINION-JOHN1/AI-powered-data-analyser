@@ -13,8 +13,8 @@ llm = OpenAI(api_token=openai_api_key)
 
 st.set_page_config(layout='wide')
 st.title("Genie🤓")
-st.image("download(1).jpg", width=800)
-st.sidebar.image("download.jpg", width=400)
+st.image("download(1)(1).png", width=800)
+st.sidebar.image("download.png", width=400)
 # Catchy description
 st.sidebar.markdown("""
 **Welcome to Genie🤓!**
